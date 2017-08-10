@@ -1,0 +1,24 @@
+暂无评论　1,179次浏览
+/.lantern/bin/lantern: error while loading shared libraries: libappindicator3.so.1: cannot open shared object file: No such file or directory .
+
+网上说的都是
+
+apt-cache libappindicator3
+
+apt-get install libappindicator3.1
+
+等等，全是错误的，根本解决不了的，实际解决办法如下
+
+只需要执行这条命令就可以了apt-get install gir1.2-appindicator3-0.1
+
+这里顺便说下kali linux安装lantern方法（4条命令即可解决）：
+
+‘’‘
+wget http://down.whsir.com/downloads/lantern-installer-beta-64-bit.deb
+ 
+dpkg -i lantern-installer-beta-64-bit.deb
+ 
+apt-get -f install
+ 
+apt-get install gir1.2-appindicator3-0.1
+’‘’
